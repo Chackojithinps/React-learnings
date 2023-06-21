@@ -3,11 +3,15 @@ import './App.css';
 
 function App() {
    const age=116;
-   if(age>=18){
-    return <h1>Verified</h1>
-   }else{
-    return <h1>Not Verified</h1>
-   }
+   const isColor=true;
+   return (
+     <div className='App'>
+        {age>=18?<p1>over age</p1>:<p>under Age</p>}
+        <h1 style={{color:isColor?"green":"red"}}>Jithin</h1>
+
+        {isColor && <button>This is a button</button>}
+     </div>
+   )
 }
 
 
