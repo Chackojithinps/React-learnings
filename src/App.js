@@ -2,15 +2,16 @@ import './App.css';
 import {Planets} from './User'
 import {useState} from 'react'
 function App() {
-  const [age,setAge]= useState(0)
-  const incrementAge=()=>{
-  setAge(age+1)
+  const [text,setText]= useState("")
+  const changeText=(event)=>{
+      setText(event.target.value)
   }
    return (
     
      <div className='App'>
-         <Planets age={age}/>
-         <button onClick={incrementAge}>increment age</button>
+         <Planets text={text}/>
+         <input onChange={changeText} type='text'/>
+         
          
      </div>
    )

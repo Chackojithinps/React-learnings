@@ -3,7 +3,7 @@ export const Planets=(props)=>{
    
     return(
       <div>
-        {props.age}
+        {props.text}
       </div>
     )
 }
