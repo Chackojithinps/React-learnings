@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-import {User} from './User'
+import {Planets} from './User'
 
 function App() {
-   const names=[
-    {name:"jithin",age:12},
-    {name:"kiran",age:24},
-    {name:"amal",age:28}
-   ]
+  const planets = [
+    { name: "Mars", isGasPlanet: false },
+    { name: "Earth", isGasPlanet: false },
+    { name: "Jupiter", isGasPlanet: true },
+    { name: "Venus", isGasPlanet: false },
+    { name: "Neptune", isGasPlanet: true },
+    { name: "Uranus", isGasPlanet: true },
+  ];
    return (
      <div className='App'>
-        {names.map((user,key)=>{
-          return <User name={user.name} age={user.age} key={key}/>
-        })}
+       {planets.map((planet,key)=>(
+       planet.isGasPlanet && <Planets name={planet.name}/>) )}
      </div>
    )
 }
-
-
-
-
 export default App;

@@ -1,7 +1,7 @@
-export const User=(props)=>{
+export const Planets=(props)=>{
     return(
       <div>
-         <h1 key={props.key}>{props.name} {props.age}</h1>
+         <h1 >{props.name}</h1>
       </div>
     )
 }
