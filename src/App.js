@@ -1,18 +1,16 @@
 import './App.css';
-import {Planets} from './User'
+// import {Planets} from './User'
 import {useState} from 'react'
 function App() {
-  const [text,setText]= useState("")
-  const changeText=(event)=>{
-      setText(event.target.value)
-  }
+  const [state,setState]= useState(false)
    return (
     
      <div className='App'>
-         <Planets text={text}/>
-         <input onChange={changeText} type='text'/>
-         
-         
+         {/* <Planets text={text}/> */}
+         <button onClick={()=>{
+           setState(!state)
+         }}>Show/Hidden</button>
+         {state && <h1>Hello ! This is jithin chacko</h1> }
      </div>
    )
 }
