@@ -1,16 +1,51 @@
 import './App.css';
 // import {Planets} from './User'
 import {useState} from 'react'
+import { Task } from './Todo';
 function App() {
-  const [color,setcolor]= useState("black")
+   const [newTask,setNewtask]=useState("")
+   const [Todo,setTodo]=useState([])
+   const newItems=(event)=>{
+      setNewtask(event.target.value)
+   }
+   const addItems=()=>{
+      const task={
+         id:Todo.length===0?1:Todo[Todo.length-1].id+1,
+         taskName:newTask,
+         completed:false
+      }
+      setTodo([...Todo,task])
+   }
+   const deleteItem = (newId) => {
+    var newTodLists = Todo.filter((task) =>{
+      return task.id!==newId
+    })
+    
+    setTodo(newTodLists)
+  };
+  const completeItem=(newId)=>{
+   setTodo(
+      Todo.map((task)=>{
+         if(task.id===newId){
+            return {...task,completed:true}
+         }else{
+            return task
+         }
+      })
+   )
+ }
    return (
        <div className='App'>
-         <button onClick={()=>{
-           setcolor(color==="black" ? "red" : "black")
-         }}>change color</button>
-        
-      <h1 style={{color:color}}>Hello! This is Jithin chacko </h1>
-     </div>
+         <div>
+            <input onChange={newItems} text/>
+            <button onClick={addItems}>Add Items</button>
+         </div>
+         <div>
+             {Todo.map((item,key)=>{
+                   return <Task taskName={item.taskName} id={item.id} deleteItem={deleteItem} completeItem={completeItem} />
+             })}
+         </div>
+       </div>
    )
 }
 export default App;
