@@ -39,6 +39,11 @@ function App() {
  const addCount=()=>{
      setCount(count+1)
  }
+  const obj={
+    title:"first counter",
+    count,
+    place:"Kannur"
+  }
    return (
        <div className='App'>
          {/* <div>
@@ -51,7 +56,7 @@ function App() {
              })}
          </div> */}
          <button onClick={addCount}>Add count</button>
-         <Count title="First counter" count={count}/>
+         <Count {...obj}/>
          <Count title="Second counter" count={count}/>
        </div>
    )
