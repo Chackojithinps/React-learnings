@@ -1,0 +1,7 @@
+------->
+In React, when you write onClick={addItems()}, you are actually calling the addItems function 
+immediately when the component renders instead of assigning it as a callback function to be executed
+when the button is clicked.This happens because the parentheses () after addItems invoke the 
+function immediately. So, when the component renders, the addItems function will be executed,
+and its return value will be assigned as the onClick event handler for the button. 
+
