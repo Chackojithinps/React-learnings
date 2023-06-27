@@ -59,7 +59,8 @@ function App() {
              })}
          </div> */}
          <button onClick={showHidden}>Show / Hidden</button>
-         {counter?<Counter/> : null}
+         {/* {counter?<Counter/> : null} */}
+         {counter && <Counter />}
        
        </div>
    )
