@@ -1,12 +1,12 @@
 import './App.css';
 // import {Planets} from './User'
 import {useState} from 'react'
-import { Count } from './count';
+import { Counter } from './Counter';
 // import { Task } from './Todo';
 function App() {
    // const [newTask,setNewtask]=useState("")
    // const [Todo,setTodo]=useState([])
-   const [count,setCount]=useState(0)
+   const [counter,setCounter]=useState(false)
    // const newItems=(event)=>{
    //    setNewtask(event.target.value)
    // }
@@ -36,14 +36,17 @@ function App() {
 //       })
 //    )
 //  }
- const addCount=()=>{
-     setCount(count+1)
+//  const addCount=()=>{
+//      setCount(count+1)
+//  }
+ const showHidden=()=>{
+    setCounter(!counter)
  }
-  const obj={
-    title:"first counter",
-    count,
-    place:"Kannur"
-  }
+//   const obj={
+//     title:"first counter",
+//     count,
+//     place:"Kannur"
+//   }
    return (
        <div className='App'>
          {/* <div>
@@ -55,9 +58,9 @@ function App() {
                    return <Task taskName={item.taskName} id={item.id} deleteItem={deleteItem} completeItem={completeItem} />
              })}
          </div> */}
-         <button onClick={addCount}>Add count</button>
-         <Count {...obj}/>
-         <Count title="Second counter" count={count}/>
+         <button onClick={showHidden}>Show / Hidden</button>
+         {counter?<Counter/> : null}
+       
        </div>
    )
 }
