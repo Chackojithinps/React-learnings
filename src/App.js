@@ -1,6 +1,6 @@
 import './App.css';
 // import {Planets} from './User'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { Counter } from './Counter';
 // import { Task } from './Todo';
 function App() {
@@ -39,6 +39,9 @@ function App() {
 //  const addCount=()=>{
 //      setCount(count+1)
 //  }
+ useEffect(()=>{
+    console.log("mounting......")
+ })
  const showHidden=()=>{
     setCounter(!counter)
  }

@@ -1,5 +1,12 @@
+import { useState } from "react"
+
 export const Counter=()=>{
+    const [count,setCount]=useState(0)
     return (
-        <h1>This is component example</h1>
+        <div>
+        <button onClick={()=>setCount(count+1)}>Increment</button>
+        <h1>This is component Counter : {count} </h1>
+
+        </div>
     )
 }
