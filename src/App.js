@@ -1,12 +1,14 @@
 import './App.css';
 // import {Planets} from './User'
 import {useEffect, useState} from 'react'
-import { Counter } from './Counter';
+// import { Counter } from './Counter';
+// import {name1,age,place} from './Test';
+import Testing from './Test';
 // import { Task } from './Todo';
 function App() {
    // const [newTask,setNewtask]=useState("")
    // const [Todo,setTodo]=useState([])
-   const [counter,setCounter]=useState(false)
+   // const [counter,setCounter]=useState(false)
    // const newItems=(event)=>{
    //    setNewtask(event.target.value)
    // }
@@ -42,9 +44,9 @@ function App() {
  useEffect(()=>{
     console.log("mounting......")
  })
- const showHidden=()=>{
-    setCounter(!counter)
- }
+//  const showHidden=()=>{
+//     setCounter(!counter)
+//  }
 //   const obj={
 //     title:"first counter",
 //     count,
@@ -52,6 +54,7 @@ function App() {
 //   }
    return (
        <div className='App'>
+         <Testing />
          {/* <div>
             <input onChange={newItems} text/>
             <button onClick={addItems}>Add Items</button>
@@ -61,9 +64,12 @@ function App() {
                    return <Task taskName={item.taskName} id={item.id} deleteItem={deleteItem} completeItem={completeItem} />
              })}
          </div> */}
-         <button onClick={showHidden}>Show / Hidden</button>
+         {/* {name1}
+         {age}
+         {place} */}
+         {/* <button onClick={showHidden}>Show / Hidden</button> */}
          {/* {counter?<Counter/> : null} */}
-         {counter && <Counter />}
+         {/* {counter && <Counter />} */}
        
        </div>
    )

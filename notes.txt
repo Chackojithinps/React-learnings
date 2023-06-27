@@ -13,3 +13,14 @@ and its return value will be assigned as the onClick event handler for the butto
 ---->Benefits of fragments 
      it do not appear on your deocument.
      <></>
+
+----->is jsx is understand by browser?
+      NO.actually it is converted into html code and as well as js code
+      Browser can only understand either html,css,js
+
+----->Default is using in export we can directly import.but in normal export we have to destructe it.
+    In React, the "default export" is a feature that allows a module to export a single value
+    or component as the default export. It is commonly used when there is only one main value
+    or component that needs to be imported from a module.When a module uses default export,
+    it means that when another module imports from it, it can choose to import the default
+    export without specifying its name or use a custom name for it.
