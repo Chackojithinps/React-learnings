@@ -5,3 +5,11 @@ when the button is clicked.This happens because the parentheses () after addItem
 function immediately. So, when the component renders, the addItems function will be executed,
 and its return value will be assigned as the onClick event handler for the button. 
 
+--->We cant put return to be empty 
+    we Cant return more than one element 
+    we can return only one element.
+    Always wrap multiple elements inside one element.Fragments are used to wrap without getting notices on html
+
+---->Benefits of fragments 
+     it do not appear on your deocument.
+     <></>
