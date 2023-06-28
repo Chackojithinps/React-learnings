@@ -49,3 +49,6 @@ and its return value will be assigned as the onClick event handler for the butto
        when ever the dependency in useEffect updates it will run the function inside the useEffect.
 
 ------>When ever we want a component inside any other component it is called child parent relationship.
+
+------>when a normal variable or js variable get updates,react doenst care,it doest make changes in frontend.Reacts only looks states to change.
+       whenever the states changes it will rerender the component.
