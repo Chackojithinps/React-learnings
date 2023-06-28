@@ -7,5 +7,5 @@ const Testing=()=>{
     return(
         <h1>Hello This is jithin</h1>
     )
-}
+  }
 export default Testing;

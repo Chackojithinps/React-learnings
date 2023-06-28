@@ -24,3 +24,19 @@ and its return value will be assigned as the onClick event handler for the butto
     or component that needs to be imported from a module.When a module uses default export,
     it means that when another module imports from it, it can choose to import the default
     export without specifying its name or use a custom name for it.
+
+---->when ever anything happens in react,react doesnt make changes directly in html Dom
+     what exactly react do is it create a virtual dom. (No one can see that,react creates its own Dom.that is 
+     virtual Dom).So with the help of virtual dom react identifies which needs to be changed
+     and just change only those things.so it is faster.
+
+----->How virtual dom works?
+     REact run on virtual Dom and then compares wiht the real dom.when ever find a difference it 
+     updates the real dom with the virtual dom .because virtual dom is the updated one. 
+     (js directly work on Dom)
+
+------>in react The let and const not going to update the dom .to this we are using the hooks.
+
+------>Rendering means processing part of website(putting js html css together and make us or give the website )
+
+------>when a reactive variable get updated the whole component get re-rendered.

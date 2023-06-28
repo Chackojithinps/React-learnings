@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addCount()">Add Val</button>
+    <h1 id="count"></h1>
+</body>
+</html>
+<script>
+    var count = 0; // Initialize count variable
+
+    function addCount(){
+        count += 1; // Increment count by 1
+        document.getElementById('count').innerHTML = count; // Update the count displayed on the page
+    }
+</script>
