@@ -47,3 +47,5 @@ and its return value will be assigned as the onClick event handler for the butto
 
 ------>useEffect runs for the first time alwayus when component renders
        when ever the dependency in useEffect updates it will run the function inside the useEffect.
+
+------>When ever we want a component inside any other component it is called child parent relationship.
