@@ -39,4 +39,11 @@ and its return value will be assigned as the onClick event handler for the butto
 
 ------>Rendering means processing part of website(putting js html css together and make us or give the website )
 
------->when a reactive variable get updated the whole component get re-rendered.
+------>when a reactive variable get updated the whole component get re-rendered.(Not the whole document only component we needs)
+
+------>useState(0) here 0 is initial value
+
+------>Each state is relevent or related to that particular component only.
+
+------>useEffect runs for the first time alwayus when component renders
+       when ever the dependency in useEffect updates it will run the function inside the useEffect.

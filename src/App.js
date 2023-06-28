@@ -1,76 +1,17 @@
+import { useEffect } from 'react';
 import './App.css';
-// import {Planets} from './User'
-import {useEffect, useState} from 'react'
-// import { Counter } from './Counter';
-// import {name1,age,place} from './Test';
-import Testing from './Test';
-// import { Task } from './Todo';
+import { useState} from 'react';
 function App() {
-   // const [newTask,setNewtask]=useState("")
-   // const [Todo,setTodo]=useState([])
-   // const [counter,setCounter]=useState(false)
-   // const newItems=(event)=>{
-   //    setNewtask(event.target.value)
-   // }
-//    const addItems=()=>{
-//       const task={
-//          id:Todo.length===0?1:Todo[Todo.length-1].id+1,
-//          taskName:newTask,
-//          completed:false
-//       }
-//       setTodo([...Todo,task])
-//    }
-//    const deleteItem = (newId) => {
-//     var newTodLists = Todo.filter((task) =>{
-//       return task.id!==newId
-//     })
+   const [state,setState]=useState(0)
+   useEffect(() => {
     
-//     setTodo(newTodLists)
-//   };
-//   const completeItem=(newId)=>{
-//    setTodo(
-//       Todo.map((task)=>{
-//          if(task.id===newId){
-//             return {...task,completed:true}
-//          }else{
-//             return task
-//          }
-//       })
-//    )
-//  }
-//  const addCount=()=>{
-//      setCount(count+1)
-//  }
- useEffect(()=>{
-    console.log("mounting......")
- })
-//  const showHidden=()=>{
-//     setCounter(!counter)
-//  }
-//   const obj={
-//     title:"first counter",
-//     count,
-//     place:"Kannur"
-//   }
+    console.log("This is component testing")
+   },[state])
+   
    return (
        <div className='App'>
-         <Testing />
-         {/* <div>
-            <input onChange={newItems} text/>
-            <button onClick={addItems}>Add Items</button>
-         </div>
-         <div>
-             {Todo.map((item,key)=>{
-                   return <Task taskName={item.taskName} id={item.id} deleteItem={deleteItem} completeItem={completeItem} />
-             })}
-         </div> */}
-         {/* {name1}
-         {age}
-         {place} */}
-         {/* <button onClick={showHidden}>Show / Hidden</button> */}
-         {/* {counter?<Counter/> : null} */}
-         {/* {counter && <Counter />} */}
-       
+           <button onClick={()=>setState(state+1)}>Add</button>
+           <p>{state}</p>
        </div>
    )
 }
