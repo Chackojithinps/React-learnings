@@ -108,3 +108,17 @@ export default function CountWithEffect() {
         </div>
     );
 }
+
+
+------>Routes 
+       Used to define all the routes 
+
+------>Router
+       Router is used to define where in your app you want to access to react dom stuffs.
+
+------>Props drilling 
+        Data not required by parents also have the data 
+        processing part is expensive
+
+------>useContext--
+       it is use to sent the data from parent to child directly .
