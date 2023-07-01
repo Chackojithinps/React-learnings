@@ -52,3 +52,59 @@ and its return value will be assigned as the onClick event handler for the butto
 
 ------>when a normal variable or js variable get updates,react doenst care,it doest make changes in frontend.Reacts only looks states to change.
        whenever the states changes it will rerender the component.
+
+------>when we store an item in local storage and when we open the site in new tab that data will be there .it wont lost.
+       But in the session storage the data will be stored to that specific tab only.
+
+------>To store item in local storage we can use window.localStorage.setItem('module','7') (here like key value pair we can store.key and value should be string.)
+       window.localStorage.getItem('module') to get that data
+       local storage is a part of browser.
+
+------>json.stringify converts array into string and objects into string.
+       when we want to store the data into local storage we have to stringify that. and if we want to bring data from localStorage to frontend we need to parse it.
+
+
+------->import { useState } from "react";
+
+export default function CountWithoutEffect() {
+    const [count, setCount] = useState(0);
+    const [doubleCount, setDoubleCount] = useState(count * 2);
+    const handleCount = () => {
+        setCount(count + 1);
+        setDoubleCount(count * 2); // This will not use the latest value of count
+    };
+    return (
+        <div className="App">
+            <div>
+                <h2>Count Without useEffect</h2>
+                <h3>Count: {count}</h3>
+                <h3>Count * 2: {doubleCount}</h3>
+                <button onClick={handleCount}>Count++</button>
+            </div>
+        </div>
+    );
+}
+
+
+----->import { useState, useEffect } from "react";
+
+export default function CountWithEffect() {
+    const [count, setCount] = useState(0);
+    const [doubleCount, setDoubleCount] = useState(count * 2);
+    const handleCount = () => {
+        setCount(count + 1);
+    };
+
+    useEffect(() => {
+        setDoubleCount(count * 2); // This will always use latest value of count
+    }, [count]);
+
+    return (
+        <div>
+            <h2>Count with useEffect</h2>
+            <h3>Count: {count}</h3>
+            <h3>Count * 2: {doubleCount}</h3>
+            <button onClick={handleCount}>Count++</button>
+        </div>
+    );
+}

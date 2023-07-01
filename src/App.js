@@ -1,18 +1,33 @@
-import { useEffect } from 'react';
-import './App.css';
-import { useState} from 'react';
-function App() {
-   const [state,setState]=useState(0)
-   useEffect(() => {
-    
-    console.log("This is component testing")
-   },[state])
+import axios from 'axios'
+import React from 'react'
+import { useState } from 'react'
+ export const App = () => {
+    const [state,setState]= useState([])
+    const [bool,setBool]=useState(false)
    
-   return (
-       <div className='App'>
-           <button onClick={()=>setState(state+1)}>Add</button>
-           <p>{state}</p>
-       </div>
-   )
+  return (
+    <div>
+        <h1>Hello world</h1>
+        <button onClick={()=>{
+            setBool(true)
+            axios.get('https://jsonplaceholder.typicode.com/posts').then((res)=>{
+               console.log(res)
+               setState(res.data)
+               setBool(false)
+               
+            })
+        }}>Generate API</button>
+        {    
+             bool!==true?
+             state.map((item,index)=>
+                <div>
+                 <h1>{index+1}</h1>
+                 <h4>{item.title}</h4>
+                </div>
+            ):"Loading......"
+        }
+    </div>
+  )
 }
-export default App;
+
+
