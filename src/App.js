@@ -1,19 +1,15 @@
-import axios from 'axios'
-import React from 'react'
-import Footer from './Components/Layouts/Footer'
+import React from "react"
+import One from './Components/PropDrilling/One'
+import {useState} from 'react'
+import AppContext from "./Context"
 
-import {
-  BrowserRouter , Routes,
-  Route,
-  Link,
-} from 'react-router-dom'
  export const App = () => {
-   
+  const [state,setState] =useState(100);
   return (
-    <div>
-        
-        
-    </div>
+    <AppContext.Provider value={{state,setState}}>
+      <h1>App</h1>
+      <One />  
+    </AppContext.Provider>
   )
 }
 

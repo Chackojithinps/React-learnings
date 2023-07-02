@@ -121,4 +121,12 @@ export default function CountWithEffect() {
         processing part is expensive
 
 ------>useContext--
-       it is use to sent the data from parent to child directly .
+       it is use to sent the data from parent to child directly .anyOne can access it directly
+       SomeContext.Provider lets you provide the context value to components.
+       SomeContext.Consumer is an alternative and rarely used way to read the context value.
+       createContext lets you create a context that components can provide or read.
+       
+------->createContext(defaultValue)
+        const ThemeContext = createContext('light');
+        defaultValue: The value that you want the context to have when there is no matching context provider in the tree above the component that reads context.
+         If you don’t have any meaningful default value, specify null. The default value is meant as a “last resort” fallback. It is static and never changes over time.
