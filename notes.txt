@@ -15,8 +15,10 @@ and its return value will be assigned as the onClick event handler for the butto
      <></>
 
 ----->is jsx is understand by browser?
+
       NO.actually it is converted into html code and as well as js code
       Browser can only understand either html,css,js
+      JSX means which allows you to write HTML tags inside the JavaScript code:
 
 ----->Default is using in export we can directly import.but in normal export we have to destructe it.
     In React, the "default export" is a feature that allows a module to export a single value
@@ -134,3 +136,21 @@ export default function CountWithEffect() {
         Typically, you will use SomeContext.Provider in components to specify the context value, and call useContext(SomeContext) in components below to read it. 
 
         value: The value that you want to pass to all the components reading this context inside this provider, no matter how deep.
+
+------->Dom means it a object oriented representations of web page.
+        when the webpage loaded browser creates the html dom of the page.
+        it represents all Html elements as objects.that means each html element will be considered as an object in dom
+        each have parent child relationsship.
+        so through dom we can  access the the html elements.
+
+-------->Why then virutal Dom is used?
+        when we make a change in dom , the updated element and it’s children have to be re-rendered to update the application UI.
+        The re-rendering or re-painting of the UI is what makes it slow. Therefore, the more UI components you have,
+        the more expensive the DOM updates could be, since they would need to be re-rendered for every DOM update.
+        The virtual DOM is only a virtual representation of the DOM. Everytime the state of our application changes, the virtual DOM gets updated instead of the real DOM.
+
+-------->How does React use Virtual DOM
+        In React every UI piece is a component, and each component has a state. React follows the observable pattern and listens for state changes. 
+        When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the 
+        current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.Once React knows which virtual DOM objects have changed,
+         then React updates only those objects, in the real DOM.
