@@ -125,8 +125,12 @@ export default function CountWithEffect() {
        SomeContext.Provider lets you provide the context value to components.
        SomeContext.Consumer is an alternative and rarely used way to read the context value.
        createContext lets you create a context that components can provide or read.
-       
+
 ------->createContext(defaultValue)
         const ThemeContext = createContext('light');
         defaultValue: The value that you want the context to have when there is no matching context provider in the tree above the component that reads context.
-         If you don’t have any meaningful default value, specify null. The default value is meant as a “last resort” fallback. It is static and never changes over time.
+        If you don’t have any meaningful default value, specify null. The default value is meant as a “last resort” fallback. It is static and never changes over time.
+        createContext returns a context object.The context object itself does not hold any information. It represents which context other components read or provide.
+        Typically, you will use SomeContext.Provider in components to specify the context value, and call useContext(SomeContext) in components below to read it. 
+
+        value: The value that you want to pass to all the components reading this context inside this provider, no matter how deep.

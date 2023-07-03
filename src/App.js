@@ -1,7 +1,8 @@
 import React from "react"
 import One from './Components/PropDrilling/One'
 import {useState} from 'react'
-import AppContext from "./Context"
+// import AppContext from "./Contex
+import { AppContext } from "./Context"
 
  export const App = () => {
   const [state,setState] =useState(100);
