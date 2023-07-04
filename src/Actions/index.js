@@ -1,2 +1,2 @@
-export const inNum=(num)=>({type:'IN_NUM'})
-export const deNum=(num)=>({type:"DE_NUM"}) 
+export const inNum=()=>({type:'IN_NUM'})
+export const deNum=()=>({type:"DE_NUM"}) 
