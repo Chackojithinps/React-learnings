@@ -191,3 +191,6 @@ export default function CountWithEffect() {
          It is a technique used to reduce the load time of a React app. Lazy loading helps reduce the risk of web app performances to a minimum.
 
 -------->useMemo() It is a React hook that is used for caching CPU-Expensive functions.
+
+-------->redux
+         npm i redux react-redux for install the redux
