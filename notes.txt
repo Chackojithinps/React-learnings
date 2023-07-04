@@ -32,6 +32,7 @@ and its return value will be assigned as the onClick event handler for the butto
      virtual Dom).So with the help of virtual dom react identifies which needs to be changed
      and just change only those things.so it is faster.
 
+
 ----->How virtual dom works?
      REact run on virtual Dom and then compares wiht the real dom.when ever find a difference it 
      updates the real dom with the virtual dom .because virtual dom is the updated one. 
@@ -114,9 +115,11 @@ export default function CountWithEffect() {
 
 ------>Routes 
        Used to define all the routes 
+       npm i -D react-router-dom
 
 ------>Router
        Router is used to define where in your app you want to access to react dom stuffs.
+       <Link> is used to set the URL 
 
 ------>Props drilling 
         Data not required by parents also have the data 
@@ -130,7 +133,6 @@ export default function CountWithEffect() {
 
 ------->createContext(defaultValue)
         const ThemeContext = createContext('light');
-        defaultValue: The value that you want the context to have when there is no matching context provider in the tree above the component that reads context.
         If you don’t have any meaningful default value, specify null. The default value is meant as a “last resort” fallback. It is static and never changes over time.
         createContext returns a context object.The context object itself does not hold any information. It represents which context other components read or provide.
         Typically, you will use SomeContext.Provider in components to specify the context value, and call useContext(SomeContext) in components below to read it. 
@@ -154,3 +156,38 @@ export default function CountWithEffect() {
         When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the 
         current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.Once React knows which virtual DOM objects have changed,
          then React updates only those objects, in the real DOM.
+
+-------->Components are independent and reusable bits of code. Components are like functions that return HTML elements.
+         Components come in two types, Class components and Function components.
+
+-------->Props are arguments passed into React components.
+
+--------> conditional rendering
+          In React, conditional rendering is the process of displaying different content based on certain conditions or states. 
+
+-------->React Memo
+         React memo is a Higher Order Component (HOC)
+         React memo is used to optimize the performance and make the application faster.. The Memo API avoids unnecessary re-renders in functional components
+         example look at in the geeks for geeks
+
+-------->Hooks 
+         allow function components to have access to state and other React features.
+
+-------->state 
+        used to contain data or information about the component. A component’s state can change over time; whenever it changes, the component re-renders. 
+
+-------->useState
+        Usestate is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it.
+        The Hook takes an initial state value as an argument and returns an updated state value whenever the setter function is called. 
+
+-------->useEffect
+         The useEffect Hook allows you to perform side effects in your components.side effects are actions which are performed with the "outside world."
+         Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+
+------->A “key” is a special string attribute you need to include when creating lists of elements in React.
+         Keys are used in React to identify which items in the list are changed, updated, or deleted.
+
+-------->Lazy Loading -
+         It is a technique used to reduce the load time of a React app. Lazy loading helps reduce the risk of web app performances to a minimum.
+
+-------->useMemo() It is a React hook that is used for caching CPU-Expensive functions.
