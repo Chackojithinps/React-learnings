@@ -194,3 +194,8 @@ export default function CountWithEffect() {
 
 -------->redux
          npm i redux react-redux for install the redux
+
+-------->Firebase
+        With Firebase, we do not have to create database schema upfront because Firebase is very flexible and allows changes to the schema as
+        we progress with our application.As our application evolves over time, it’s recommended to build an app with Firebase and change the 
+        schema simultaneously based on the requirements.
