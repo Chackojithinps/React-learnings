@@ -13,6 +13,7 @@ import { useSelector,useDispatch } from "react-redux"
   const addFunction =()=>{
     dispatch({type:"ADD",payload:10})
   }
+  
   return (
     <>
         <h1>Counter appp</h1>
