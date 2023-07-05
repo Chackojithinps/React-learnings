@@ -199,3 +199,6 @@ export default function CountWithEffect() {
         With Firebase, we do not have to create database schema upfront because Firebase is very flexible and allows changes to the schema as
         we progress with our application.As our application evolves over time, it’s recommended to build an app with Firebase and change the 
         schema simultaneously based on the requirements.
+
+-------->https://blog.logrocket.com/build-crud-application-react-firebase-web-sdk-v9/
+        for firebase crud operation documentations.
