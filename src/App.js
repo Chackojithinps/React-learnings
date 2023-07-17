@@ -1,19 +1,39 @@
 import React from "react"
 // import AppContext from "./Contex
+// import { useSelector,useDispatch } from "react-redux"
 import { useSelector,useDispatch } from "react-redux"
  export const App = () => {
-  const counter=useSelector(state=>state.counter)
-  const dispatch=useDispatch()
+//   const counter=useSelector(state=>state.counter)
+//   const dispatch=useDispatch()
+//   const increment=()=>{
+//      dispatch({type:"INC"})
+//   }
+//   const decrement=()=>{
+//     dispatch({type:"DEC"})
+//   }
+//   const addFunction =()=>{
+//     dispatch({type:"ADD", payload:10})
+//   }
+  const dispatch = useDispatch()
+  const counter = useSelector((state)=>{
+     return state.counter
+  })
   const increment=()=>{
-     dispatch({type:"INC"})
+      dispatch({
+        type:"INC"
+      })
   }
-  const decrement=()=>{
-    dispatch({type:"DEC"})
+  const decrement = ()=>{
+     dispatch({
+      type:"DEC"
+     })
+
   }
   const addFunction =()=>{
-    dispatch({type:"ADD",payload:10})
+     dispatch({
+      type:"ADD",payload:10
+     })
   }
-  
   return (
     <>
         <h1>Counter appp</h1>

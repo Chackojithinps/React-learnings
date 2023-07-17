@@ -202,3 +202,6 @@ export default function CountWithEffect() {
 
 -------->https://blog.logrocket.com/build-crud-application-react-firebase-web-sdk-v9/
         for firebase crud operation documentations.
+
+        other good sites 
+        https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
